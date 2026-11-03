@@ -1,0 +1,116 @@
+/* ──────────────────────────────────────────────────────────────────────────
+   Everything that sets the feel of the page is a variable, so the type and
+   colour can be retuned without touching the rules below.
+   ────────────────────────────────────────────────────────────────────────── */
+:root {
+  --ink:        #1a1a1a;
+  --ink-soft:   #44474d;
+  --ink-quiet:  #6b7078;
+  --rule:       #e4e6e9;
+  --rule-soft:  #f0f1f3;
+  --accent:     #8c1515;
+  --bg:         #ffffff;
+
+  --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
+  --measure: 46rem;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { font-size: 108%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 1rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.wrap { width: 100%; max-width: var(--measure); margin: 0 auto; padding: 0 1.25rem; }
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 2px; }
+
+/* ── Header ───────────────────────────────────────────────────────────── */
+.site-head { border-bottom: 1px solid var(--rule); background: var(--bg); }
+.site-head .wrap {
+  display: flex; align-items: baseline; justify-content: space-between;
+  gap: 1.5rem; padding-top: 1.35rem; padding-bottom: 1.35rem;
+}
+.brand { color: var(--ink); font-weight: 650; letter-spacing: -0.012em; font-size: 1.02rem; }
+.brand:hover { color: var(--accent); text-decoration: none; }
+.site-head nav { display: flex; gap: 1.35rem; flex-wrap: wrap; }
+.site-head nav a { color: var(--ink-quiet); font-size: 0.93rem; }
+.site-head nav a:hover { color: var(--accent); text-decoration: none; }
+.site-head nav a.is-current { color: var(--ink); font-weight: 600; }
+
+/* ── Type ─────────────────────────────────────────────────────────────── */
+main.wrap { padding-top: 3rem; padding-bottom: 4rem; }
+
+h1, h2, h3 { color: var(--ink); line-height: 1.25; letter-spacing: -0.016em; }
+.page-title { font-size: 1.9rem; font-weight: 680; margin: 0 0 1.75rem; }
+h2 { font-size: 1.22rem; font-weight: 640; margin: 2.75rem 0 0.75rem; }
+h3 { font-size: 1.02rem; font-weight: 620; margin: 1.9rem 0 0.4rem; }
+p  { margin: 0 0 1.15rem; color: var(--ink-soft); }
+.lede { font-size: 1.08rem; color: var(--ink); }
+
+.eyebrow {
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--ink-quiet);
+  padding-bottom: 0.45rem; margin: 3rem 0 1.1rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+/* ── Home ─────────────────────────────────────────────────────────────── */
+.intro { display: flex; gap: 2rem; align-items: flex-start; margin-bottom: 0.5rem; }
+.intro-photo {
+  flex: 0 0 auto; width: 128px; height: 128px; border-radius: 50%;
+  object-fit: cover; object-position: center top; background: var(--rule-soft);
+}
+.intro-photo.is-placeholder {
+  display: flex; align-items: center; justify-content: center;
+  border: 1px dashed var(--rule); color: var(--ink-quiet);
+  font-size: 0.74rem; text-align: center; line-height: 1.35; padding: 0.5rem;
+}
+.intro h1 { font-size: 1.95rem; font-weight: 680; margin: 0 0 0.2rem; }
+.intro .role { color: var(--ink-quiet); font-size: 0.97rem; margin: 0 0 0.9rem; }
+
+.links { display: flex; flex-wrap: wrap; gap: 0.9rem; font-size: 0.93rem; margin-top: 0.4rem; }
+
+/* ── News ─────────────────────────────────────────────────────────────── */
+.news { list-style: none; margin: 0; padding: 0; }
+.news li { display: flex; gap: 1rem; padding: 0.45rem 0; align-items: baseline; }
+.news .when {
+  flex: 0 0 5.4rem; color: var(--ink-quiet); font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+}
+.news .what { color: var(--ink-soft); font-size: 0.97rem; }
+
+/* ── Publications ─────────────────────────────────────────────────────── */
+.pubs { list-style: none; margin: 0; padding: 0; }
+.pub { padding: 1.1rem 0; border-bottom: 1px solid var(--rule-soft); }
+.pub:last-child { border-bottom: 0; }
+.pub-title { font-weight: 620; color: var(--ink); margin-bottom: 0.2rem; }
+.pub-authors { color: var(--ink-soft); font-size: 0.92rem; }
+.pub-authors strong { color: var(--ink); font-weight: 650; }
+.pub-venue { color: var(--ink-quiet); font-size: 0.89rem; margin-top: 0.1rem; }
+.pub-links { margin-top: 0.45rem; display: flex; gap: 1rem; font-size: 0.88rem; }
+
+/* ── Footer ───────────────────────────────────────────────────────────── */
+.site-foot {
+  border-top: 1px solid var(--rule); margin-top: 3rem;
+  padding: 1.5rem 0 2.5rem; color: var(--ink-quiet); font-size: 0.88rem;
+}
+.site-foot .sep { margin: 0 0.5rem; color: var(--rule); }
+
+@media (max-width: 34rem) {
+  .intro { flex-direction: column; gap: 1.25rem; }
+  .intro-photo { width: 104px; height: 104px; }
+  .news li { flex-direction: column; gap: 0.1rem; }
+  .news .when { flex: none; }
+}

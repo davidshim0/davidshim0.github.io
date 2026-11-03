@@ -1,0 +1,16 @@
+<li class="pub">
+  <div class="pub-title">{{ include.pub.title }}</div>
+  <div class="pub-authors">
+    {%- assign names = include.pub.authors | split: ", " -%}
+    {%- for n in names -%}
+      {%- if n == include.pub.me -%}<strong>{{ n }}</strong>{%- else -%}{{ n }}{%- endif -%}
+      {%- unless forloop.last %}, {% endunless -%}
+    {%- endfor -%}
+  </div>
+  <div class="pub-venue">{{ include.pub.venue }}, {{ include.pub.year }}</div>
+  <div class="pub-links">
+    {% if include.pub.pdf %}<a href="{{ include.pub.pdf }}">PDF</a>{% endif %}
+    {% if include.pub.doi %}<a href="{{ include.pub.doi }}">Publisher page</a>{% endif %}
+    {% if include.pub.summary %}<a href="{{ include.pub.summary }}">Summary</a>{% endif %}
+  </div>
+</li>

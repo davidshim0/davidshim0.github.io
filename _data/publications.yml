@@ -1,0 +1,18 @@
+- title: "The Kernel's Write: Application Read-Only Memory"
+  authors: "Hui Sub Shim, Katherine Mohr, Philip Levis"
+  me: "Hui Sub Shim"
+  venue: "4th Workshop on Disruptive Memory Systems (DIMES '26)"
+  year: 2026
+  doi: "https://doi.org/10.1145/3831664.3837780"
+  pdf: "https://sing.stanford.edu/site/assets/publications/shim-dimes26.pdf"
+  summary: "https://sing.stanford.edu/site/assets/summaries/shim-dimes26.html"
+  selected: true
+
+- title: "Packets are Not Pages: Flow-Based Addressing Conserves Memory Bandwidth"
+  authors: "Agur Adams, Hui Sub Shim, Colin Drewes, Ben O'Keefe, Philip Levis, Zakir Durumeric"
+  me: "Hui Sub Shim"
+  venue: "Proceedings of the ACM on Networking, Vol. 4, CoNEXT3 (CoNEXT '26)"
+  year: 2026
+  doi: "https://doi.org/10.1145/3830392"
+  pdf: "https://sing.stanford.edu/site/assets/publications/adams-conext26.pdf"
+  selected: true

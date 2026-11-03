@@ -1,0 +1,29 @@
+# No plugins. GitHub Pages only runs an allowlisted set, and a site that
+# needs none builds there with no configuration at all.
+title: "Hui Sub (David) Shim"
+tagline: "PhD student, Electrical Engineering, Stanford"
+description: >-
+  Hui Sub (David) Shim is a PhD student in Electrical Engineering at
+  Stanford, working on memory systems and the operating system support
+  they need.
+url: "https://davidshim0.github.io"
+baseurl: ""
+
+author:
+  name: "Hui Sub (David) Shim"
+  short_name: "David Shim"
+  email: "hsshim@stanford.edu"
+  github: "davidshim0"
+  scholar: ""
+  linkedin: ""
+
+nav:
+  - { title: "Research",     url: "/research/" }
+  - { title: "Publications", url: "/publications/" }
+  - { title: "Notes",        url: "/notes/" }
+  - { title: "CV",           url: "/cv/" }
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
