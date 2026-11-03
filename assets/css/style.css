@@ -155,3 +155,10 @@ p { margin: 0 0 1.1rem; color: var(--ink-soft); }
 .entry ul { margin: 0.4rem 0 0; padding-left: 1.15rem; }
 .entry li { color: var(--ink-soft); margin-bottom: 0.28rem; }
 .entry li::marker { color: var(--ink-quiet); }
+
+/* A role line carries its own dates, pushed to the right. */
+.entry-role {
+  display: flex; align-items: baseline; justify-content: space-between;
+  gap: 1rem; flex-wrap: wrap;
+}
+.entry-role .entry-when { font-weight: 400; }
