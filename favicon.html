@@ -1,0 +1,25 @@
+---
+layout: default
+title: Tab icon
+permalink: /favicon-options/
+description: "Temporary page for choosing the browser tab icon."
+---
+
+<p class="lede">
+  Ten options. Each is shown large, then at 16px, which is the size a browser
+  tab actually gives it. Judge by the small one.
+</p>
+<p class="note">Temporary page. Tell me a number and I will apply it and delete this.</p>
+
+<div class="favgrid">
+  {% for o in site.data.favicons %}
+  <figure class="fav">
+    <img class="fav-big"   src="{{ '/assets/favicons/' | append: o.f | append: '.svg' | relative_url }}" alt="">
+    <img class="fav-small" src="{{ '/assets/favicons/' | append: o.f | append: '.svg' | relative_url }}" alt="">
+    <figcaption>
+      <strong>{{ forloop.index }}. {{ o.name }}</strong><br>
+      <span class="note">{{ o.note }}</span>
+    </figcaption>
+  </figure>
+  {% endfor %}
+</div>
