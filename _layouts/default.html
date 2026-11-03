@@ -29,7 +29,7 @@
   </aside>
 
   <main class="main">
-    <div class="main-inner">
+    <div class="main-inner{% if page.wide %} is-wide{% endif %}">
       {% if page.title and page.show_title != false %}<h1 class="page-title">{{ page.title }}</h1>{% endif %}
       {{ content }}
       <footer class="foot">{{ site.author.name }} · Stanford University</footer>
