@@ -37,6 +37,13 @@ show_title: false
   lets the hardware get simpler rather than more complex.
 </p>
 {% include fig/arom.html %}
+{% assign tp = site.data.publications | where: "thread", "arom" %}
+{% if tp.size > 0 %}
+<div class="thread-papers">
+  <div class="tp-label">{% if tp.size > 1 %}Papers{% else %}Paper{% endif %}</div>
+  <ul class="pubs">{% for pub in tp %}{% include pub.html pub=pub %}{% endfor %}</ul>
+</div>
+{% endif %}
 
 <h2>Packet processing and memory bandwidth</h2>
 <p>
@@ -49,6 +56,13 @@ show_title: false
   region, built and measured on FPGAs.
 </p>
 {% include fig/packets.html %}
+{% assign tp = site.data.publications | where: "thread", "packets" %}
+{% if tp.size > 0 %}
+<div class="thread-papers">
+  <div class="tp-label">{% if tp.size > 1 %}Papers{% else %}Paper{% endif %}</div>
+  <ul class="pubs">{% for pub in tp %}{% include pub.html pub=pub %}{% endfor %}</ul>
+</div>
+{% endif %}
 
 <h2>Placing data across unlike memories</h2>
 <p>
@@ -62,9 +76,3 @@ show_title: false
   actually costs.
 </p>
 {% include fig/placement.html %}
-
-<div class="eyebrow">Publications</div>
-<ul class="pubs">
-  {% assign all = site.data.publications | sort: "year" | reverse %}
-  {% for pub in all %}{% include pub.html pub=pub %}{% endfor %}
-</ul>
