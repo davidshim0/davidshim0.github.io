@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="5" fill="#8C1515"/>
+  <!-- Serif D drawn as outlines, not text: an SVG favicon is rendered by the
+       viewer and a font-dependent glyph can come out blank. The serifs are
+       kept short, because a long left overhang reads as "ID" at 16px. -->
+  <g fill="#FFFFFF">
+    <path fill-rule="evenodd" d="M8.8 7.2h9.3c5.8 0 9.9 3.6 9.9 8.8s-4.1 8.8-9.9 8.8H8.8ZM14.5 11.5v9h3.6c3.1 0 5.1-1.8 5.1-4.5s-2-4.5-5.1-4.5Z"/>
+    <rect x="7.0" y="7.2" width="7.5" height="2.7"/>
+    <rect x="7.0" y="22.1" width="7.5" height="2.7"/>
+  </g>
+</svg>
