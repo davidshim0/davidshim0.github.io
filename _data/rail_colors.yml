@@ -1,0 +1,12 @@
+- { name: "Slate (current)",  bg: "#2F3337", ink: "#F2F1EF", quiet: "#A9AEB4", contrast: "11.3:1 / 5.7:1" }
+- { name: "Cardinal",         bg: "#8C1515", ink: "#FFFFFF", quiet: "#E8C9C9", contrast: "9.4:1 / 6.1:1",  note: "Stanford primary" }
+- { name: "Dark Cardinal",    bg: "#820000", ink: "#FFFFFF", quiet: "#EFCBCB", contrast: "10.8:1 / 7.2:1", note: "Stanford" }
+- { name: "Brick",            bg: "#651C32", ink: "#FFFFFF", quiet: "#E3C8CF", contrast: "11.9:1 / 7.6:1", note: "Stanford" }
+- { name: "Plum",             bg: "#620059", ink: "#FFFFFF", quiet: "#E0CCDD", contrast: "12.6:1 / 8.3:1", note: "Stanford" }
+- { name: "Palo Alto green",  bg: "#175E54", ink: "#FFFFFF", quiet: "#BFD9D4", contrast: "7.6:1 / 5.1:1",  note: "Stanford" }
+- { name: "Deep teal",        bg: "#14504A", ink: "#FFFFFF", quiet: "#BBD4D0", contrast: "9.2:1 / 5.9:1" }
+- { name: "Lagunita",         bg: "#006B81", ink: "#FFFFFF", quiet: "#CBE4EA", contrast: "6.1:1 / 4.6:1",  note: "Stanford, the closest to a bright blue that still passes" }
+- { name: "Navy",             bg: "#1D3A52", ink: "#FFFFFF", quiet: "#AFC3D2", contrast: "11.8:1 / 6.5:1" }
+- { name: "Pale sky",         bg: "#DCEAF0", ink: "#17323D", quiet: "#4A6773", contrast: "10.9:1 / 4.9:1", note: "light rail, dark text" }
+- { name: "Fog",              bg: "#DAD7CB", ink: "#2A2724", quiet: "#5E584E", contrast: "10.3:1 / 4.9:1", note: "Stanford, light rail" }
+- { name: "Sandstone",        bg: "#D2C295", ink: "#2A2724", quiet: "#5C5340", contrast: "8.4:1 / 4.3:1",  note: "Stanford, light rail, quiet text just under AA" }
