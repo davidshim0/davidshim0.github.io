@@ -115,12 +115,6 @@ p { margin: 0 0 1.1rem; color: var(--ink-soft); }
 .pub-icon.is-site { color: #1F6F8B; }
 .pub-icon.is-sum  { color: #B5720F; }
 
-/* Monochrome set: one class on an ancestor switches all three. */
-.icons-mono .pub-icon,
-.icons-mono .pub-icon.is-pdf,
-.icons-mono .pub-icon.is-site,
-.icons-mono .pub-icon.is-sum { color: var(--ink-quiet); opacity: 0.6; }
-.icons-mono .pub-icon:hover { opacity: 1; }
 
 .foot {
   margin-top: 3.5rem; padding-top: 1.4rem; border-top: 1px solid var(--rule);
