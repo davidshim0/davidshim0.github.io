@@ -1,0 +1,29 @@
+<svg class="fig" viewBox="0 0 560 190" role="img" aria-label="Applications read from both memories but write only to DRAM; the kernel migrates pages into long-term RAM.">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+  <g class="fig-box">
+    <rect x="205" y="12" width="150" height="40" rx="6"/>
+    <text x="280" y="37" class="fig-label">Application</text>
+  </g>
+  <g class="fig-box">
+    <rect x="40" y="130" width="180" height="46" rx="6"/>
+    <text x="130" y="150" class="fig-label">DRAM</text>
+    <text x="130" y="167" class="fig-sub">small, writable</text>
+  </g>
+  <g class="fig-box is-accent">
+    <rect x="340" y="130" width="180" height="46" rx="6"/>
+    <text x="430" y="150" class="fig-label">Long-term RAM</text>
+    <text x="430" y="167" class="fig-sub">large, cheap, finite writes</text>
+  </g>
+  <g class="fig-line">
+    <path d="M250 56 L140 124" marker-end="url(#ar)"/>
+    <path d="M310 56 L420 124" marker-end="url(#ar)"/>
+    <path d="M220 153 L334 153" marker-end="url(#ar)"/>
+  </g>
+  <text x="150" y="96" class="fig-tag" text-anchor="end">read and write</text>
+  <text x="410" y="96" class="fig-tag" text-anchor="start">read only</text>
+  <text x="277" y="145" class="fig-tag" text-anchor="middle">kernel migrates</text>
+</svg>

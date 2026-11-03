@@ -2,49 +2,77 @@
 layout: default
 title: Bio
 permalink: /bio/
-description: "Education, industry background, awards and publications for Hui Sub (David) Shim."
+description: "Education, industry background and awards for Hui Sub (David) Shim."
 ---
 
-<p class="lede">
-  I am a PhD student in Electrical Engineering at Stanford, advised by Philip
-  Levis, working on memory systems. I came to research after nine years
-  building enterprise SSD firmware at Samsung.
-</p>
-
 <div class="eyebrow">Education</div>
+
 <h3>Stanford University</h3>
 <p>
-  PhD, Electrical Engineering, expected 2029. Advised by
-  <a href="http://csl.stanford.edu/~pal">Philip Levis</a> in the
-  <a href="https://sing.stanford.edu/site/">Stanford Information Networks
-  Group</a>. My work is on memory beyond DRAM and the operating system support
-  it needs.
+  PhD, Electrical Engineering, from September 2024, expected 2029. Advised by
+  <a href="http://csl.stanford.edu/~pal">Philip Levis</a>. Before joining the
+  memory work I spent two quarters in the Robust Systems Group with Subhasish
+  Mitra, on formal verification of hardware accelerators.
+</p>
+
+<h3>The University of Texas at Austin</h3>
+<p>
+  BA in Economics with Highest Honors and BBA with High Honors, minor in
+  Mathematics, December 2012. I came to computer systems afterwards rather
+  than through an engineering degree.
 </p>
 
 <div class="eyebrow">Industry</div>
-<h3>Samsung Electronics, 2016 to 2024</h3>
+
+<h3>Samsung Electronics, Memory Division &middot; 2016 to 2024</h3>
 <p>
-  Nine years on enterprise SSD firmware, latterly as a senior software
-  engineer and associate architect. My work covered metadata management and
-  power-loss protection for datacenter drives, including a PCIe Gen5 enterprise
-  SSD and a 32TB SAS SSD.
+  Nearly nine years on enterprise SSD firmware in Hwaseong, latterly as a
+  senior software engineer and associate architect. I worked on the flash
+  translation layer and on metadata management, open time optimization, NAND
+  flash exception management and power-loss protection, for NVMe and SAS
+  drives shipped to Oracle, Dell EMC, IBM and HP.
+</p>
+<p>
+  I joined through the Samsung Convergence Software Academy, a sixteen-month
+  programme that takes people without an engineering degree through the
+  equivalent of one, fourteen hours a day. I graduated top of the class.
 </p>
 
 <div class="eyebrow">Awards</div>
+
+<h3>Presidential Award, Republic of Korea &middot; 2019</h3>
 <p>
-  <strong>2022</strong> &middot; Samsung paper award, for work on SSD reliability.<br>
-  <strong>2022</strong> &middot; CES Innovation Award, for a PCIe Gen5 enterprise SSD.<br>
-  <strong>2019</strong> &middot; Samsung President's Award, for a 32TB SAS SSD.
+  For the world's first 32TB dual-port SAS enterprise SSD, the Samsung PM1643.
+  I cut the blocks reserved for metadata by estimating lifetime program and
+  erase cycles against a five-year, three-drive-writes-per-day target, which
+  returned those blocks to user capacity and raised throughput by 24 percent,
+  and split metadata work into atomic units that cut metadata-induced latency
+  by 30 percent.
 </p>
 
-<div class="eyebrow">Publications</div>
-<ul class="pub-brief">
-  {% assign all = site.data.publications | sort: "year" | reverse %}
-  {% for pub in all %}
-  <li>
-    <span class="pb-title">{{ pub.title }}</span>
-    <span class="pb-venue">{{ pub.venue }}, {{ pub.year }}</span>
-  </li>
-  {% endfor %}
-</ul>
-<p class="more"><a href="{{ '/publications/' | relative_url }}">Full list, with PDFs</a></p>
+<h3>CES Innovation Award &middot; 2022</h3>
+<p>
+  For the world's first PCIe Gen5 enterprise SSD, the Samsung PM1743. Keeping
+  the whole metadata cache in DRAM forces a DRAM budget near one thousandth of
+  device capacity, which caps how large a drive can get. I built a partial
+  DRAM scheme that uses NAND flash as the final cache stage, segmented for hit
+  rate, with read and write caches split so write latency hides entirely, and
+  a dirty-cache program scheme that writes back only dirty entries. It let
+  drives ship past 32TB on less DRAM.
+</p>
+
+<h3>Samsung Best Paper Award &middot; 2022</h3>
+<p>
+  First author on "STM: Improving the Reliability of SSD through Selective
+  Trim Manager". Metadata blocks wear out under repeated shutdowns and large
+  trims. The paper proposes a dynamic shutdown manager that skips the shutdown
+  write when open-time requirements can be met without it, and a selective
+  trim manager that ignores trims for logical zones already empty. Both
+  shipped, and cut metadata wear-out by more than 25 percent under normal
+  workloads.
+</p>
+
+<p class="note">
+  This is a summary.
+  <a href="{{ site.author.linkedin }}">See LinkedIn for the latest</a>.
+</p>

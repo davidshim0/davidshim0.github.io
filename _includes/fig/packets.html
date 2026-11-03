@@ -1,0 +1,32 @@
+<svg class="fig" viewBox="0 0 560 190" role="img" aria-label="Variable-sized packets arriving out of order must be copied to become a contiguous flow; flow-based addressing removes the copies.">
+  <defs>
+    <marker id="ar3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="currentColor"/>
+    </marker>
+  </defs>
+  <text x="20" y="22" class="fig-sub" text-anchor="start">packets arrive variable sized, out of order</text>
+  <g class="fig-box">
+    <rect x="20" y="34" width="54" height="30" rx="4"/><text x="47" y="54" class="fig-label">3</text>
+    <rect x="80" y="34" width="92" height="30" rx="4"/><text x="126" y="54" class="fig-label">1</text>
+    <rect x="178" y="34" width="38" height="30" rx="4"/><text x="197" y="54" class="fig-label">4</text>
+    <rect x="222" y="34" width="70" height="30" rx="4"/><text x="257" y="54" class="fig-label">2</text>
+  </g>
+  <text x="20" y="96" class="fig-sub" text-anchor="start">memory is fixed-size pages</text>
+  <g class="fig-box is-muted">
+    <rect x="20" y="106" width="64" height="30" rx="4"/>
+    <rect x="90" y="106" width="64" height="30" rx="4"/>
+    <rect x="160" y="106" width="64" height="30" rx="4"/>
+    <rect x="230" y="106" width="64" height="30" rx="4"/>
+  </g>
+  <g class="fig-line is-dashed">
+    <path d="M47 66 L47 102"/><path d="M126 66 L112 102"/><path d="M197 66 L186 102"/><path d="M257 66 L258 102"/>
+  </g>
+  <text x="157" y="156" class="fig-tag" text-anchor="middle">copies, every byte</text>
+  <g class="fig-line"><path d="M304 120 L344 120" marker-end="url(#ar3)"/></g>
+  <text x="324" y="110" class="fig-tag" text-anchor="middle">instead</text>
+  <g class="fig-box is-accent">
+    <rect x="352" y="106" width="188" height="30" rx="4"/>
+    <text x="446" y="126" class="fig-label">one contiguous flow</text>
+  </g>
+  <text x="446" y="156" class="fig-tag" text-anchor="middle">no copies</text>
+</svg>

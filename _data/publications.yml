@@ -5,7 +5,7 @@
   year: 2026
   doi: "https://doi.org/10.1145/3831664.3837780"
   pdf: "/assets/papers/shim-dimes26.pdf"
-  summary: "/assets/summaries/shim-dimes26.html"
+  summary: "https://sing.stanford.edu/site/assets/summaries/shim-dimes26.html"
 
 - title: "Packets are Not Pages: Flow-Based Addressing Conserves Memory Bandwidth"
   authors: "Agur Adams, Hui Sub Shim, Colin Drewes, Ben O'Keefe, Philip Levis, Zakir Durumeric"
@@ -14,3 +14,4 @@
   year: 2026
   doi: "https://doi.org/10.1145/3830392"
   pdf: "/assets/papers/adams-conext26.pdf"
+  summary: "https://sing.stanford.edu/site/assets/summaries/adams-conext26.html"

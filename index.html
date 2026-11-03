@@ -3,47 +3,64 @@ layout: default
 show_title: false
 ---
 
-<section class="intro">
-  <img class="intro-photo" src="{{ '/assets/img/david.jpg' | relative_url }}" alt="Hui Sub (David) Shim">
-  <div>
-    <h1>Hui Sub (David) Shim</h1>
-    <p class="role">PhD student, Electrical Engineering, Stanford University</p>
-    <p class="lede">
-      I work on memory systems. DRAM has stopped getting cheaper per bit while
-      memory has become the largest share of what a server costs, so I study
-      what main memory should look like next and what an operating system has
-      to do differently to use it. Before Stanford I spent nine years at
-      Samsung building enterprise SSD firmware, which is where most of my
-      intuitions about this come from.
-    </p>
-    <p>
-      I am advised by <a href="http://csl.stanford.edu/~pal">Philip Levis</a>
-      in the <a href="https://sing.stanford.edu/site/">Stanford Information
-      Networks Group</a>.
-    </p>
-    <div class="links">
-      <a href="{{ '/bio/' | relative_url }}">Bio</a>
-      <a href="https://github.com/{{ site.author.github }}">GitHub</a>
-      <a href="{{ site.author.linkedin }}">LinkedIn</a>
-      <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
-    </div>
-  </div>
-</section>
-
-<div class="eyebrow">Recent papers</div>
-<ul class="pubs">
-  {% assign recent = site.data.publications | sort: "year" | reverse %}
-  {% for pub in recent limit: 3 %}{% include pub.html pub=pub %}{% endfor %}
-</ul>
-<p class="more"><a href="{{ '/publications/' | relative_url }}">All publications</a></p>
+<p class="lede">
+  I work on memory systems. DRAM has stopped getting cheaper per bit while
+  memory has become the largest share of what a server costs, so I study what
+  main memory should look like next and what an operating system has to do
+  differently to use it. Before Stanford I spent nearly nine years at Samsung
+  building enterprise SSD firmware, which is where most of my intuitions about
+  this come from.
+</p>
+<p>
+  I am advised by <a href="http://csl.stanford.edu/~pal">Philip Levis</a> in the
+  <a href="https://sing.stanford.edu/site/">Stanford Information Networks
+  Group</a>, and much of this work is part of
+  <a href="https://dam.stanford.edu/">DAM</a>, a five-year Stanford project on
+  how future computers will manage memory as a heterogeneous resource.
+</p>
 
 <div class="eyebrow">Research</div>
+
+<h2>Application read-only memory</h2>
 <p>
-  Memory is now the largest share of what a server costs and DRAM has stopped
-  getting cheaper per bit, so my work is about what comes next and what the
-  system software around it has to do differently. I am interested in denser
-  memories whose constraints the kernel manages rather than the device hiding
-  them, in how an operating system should place data once its memories are no
-  longer alike, and in why packet processing at line rate spends so much of
-  its memory bandwidth on copies it should not need.
+  Denser and cheaper memories bring constraints DRAM does not have: asymmetric
+  read and write cost, limited endurance, and coarse write granularity.
+  Commercial parts hid those behind a translation layer on the module, and the
+  layer cost more than it saved. I work on the opposite arrangement, where the
+  system exposes the constraints and the kernel manages them. Such memory is
+  read-only to applications and written only by the kernel during migration,
+  enforced with copy-on-write, which moves wear levelling off the device and
+  lets the hardware get simpler rather than more complex.
 </p>
+{% include fig/arom.html %}
+
+<h2>Placing data across unlike memories</h2>
+<p>
+  Once a server holds several kinds of memory, the operating system has to
+  decide what belongs where, and how often a page is touched turns out to be
+  too coarse a signal. Two pages read equally often can perform very
+  differently in the same memory, because memory-level parallelism, compression
+  and read and write asymmetry all cut across access frequency. I am interested
+  in what the hardware should tell the operating system about how well a page
+  suits a given memory, and in measuring what deployed disaggregated memory
+  actually costs.
+</p>
+{% include fig/placement.html %}
+
+<h2>Packet processing and memory bandwidth</h2>
+<p>
+  Network interfaces now have enough compute to inspect traffic at line rate
+  and nowhere near enough memory bandwidth to feed it. Packets arrive variable
+  sized and out of order while the memory they land in is a contiguous address
+  space divided into fixed-size pages, and translating between the two layouts
+  costs copies that consume the bandwidth the analysis needed. With colleagues
+  I work on addressing that lets software read a whole flow as one contiguous
+  region, built and measured on FPGAs.
+</p>
+{% include fig/packets.html %}
+
+<div class="eyebrow">Publications</div>
+<ul class="pubs">
+  {% assign all = site.data.publications | sort: "year" | reverse %}
+  {% for pub in all %}{% include pub.html pub=pub %}{% endfor %}
+</ul>

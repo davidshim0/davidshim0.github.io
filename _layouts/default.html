@@ -8,30 +8,31 @@
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
-  <header class="site-head">
-    <div class="wrap">
-      <a class="brand" href="{{ '/' | relative_url }}">{{ site.author.short_name }}</a>
-      <nav>
+<div class="shell">
+
+  <aside class="rail">
+    <div class="rail-inner">
+      <img class="rail-photo" src="{{ '/assets/img/david.jpg' | relative_url }}" alt="{{ site.author.name }}">
+      <div class="rail-name">{{ site.author.name }}</div>
+      <div class="rail-role">PhD student<br>Electrical Engineering<br>Stanford University</div>
+      <nav class="rail-nav">
+        <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} class="is-current"{% endif %}>Home</a>
         {% for item in site.nav %}
         <a href="{{ item.url | relative_url }}"{% if page.url contains item.url %} class="is-current"{% endif %}>{{ item.title }}</a>
         {% endfor %}
       </nav>
+      {% include icons.html %}
     </div>
-  </header>
+  </aside>
 
-  <main class="wrap">
-    {% if page.title and page.show_title != false %}<h1 class="page-title">{{ page.title }}</h1>{% endif %}
-    {{ content }}
+  <main class="main">
+    <div class="main-inner">
+      {% if page.title and page.show_title != false %}<h1 class="page-title">{{ page.title }}</h1>{% endif %}
+      {{ content }}
+      <footer class="foot">{{ site.author.name }} · Stanford University</footer>
+    </div>
   </main>
 
-  <footer class="site-foot">
-    <div class="wrap">
-      <span>{{ site.author.name }}</span>
-      <span class="sep">·</span>
-      <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
-      <span class="sep">·</span>
-      <a href="https://github.com/{{ site.author.github }}">GitHub</a>
-    </div>
-  </footer>
+</div>
 </body>
 </html>

@@ -17,8 +17,7 @@ author:
   linkedin: "https://www.linkedin.com/in/huisub-david-shim/"
 
 nav:
-  - { title: "Bio",          url: "/bio/" }
-  - { title: "Publications", url: "/publications/" }
+  - { title: "Bio", url: "/bio/" }
 
 exclude:
   - README.md
