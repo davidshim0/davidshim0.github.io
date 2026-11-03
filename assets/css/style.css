@@ -171,3 +171,6 @@ p { margin: 0 0 1.1rem; color: var(--ink-soft); }
 /* The bio is a list of short facts rather than prose, so it reads better on a
    wider measure where most bullets fit on one line. */
 .main-inner.is-wide { max-width: 56rem; }
+
+/* Bold phrases are there to be scanned, so they also step up in color. */
+p strong, .lede strong { font-weight: 640; color: var(--ink); }

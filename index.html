@@ -6,14 +6,14 @@ show_title: false
 <h1 class="page-title">Memory after DRAM</h1>
 
 <p class="lede">
-  I spent nearly nine years at Samsung, one of the world’s largest DRAM
-  vendors, and now I work on replacing DRAM. The devices keep improving, but
+  I spent <strong>nearly nine years at Samsung</strong>, one of the world’s largest DRAM
+  vendors, and now I work on <strong>replacing DRAM</strong>. The devices keep improving, but
   progress in cost per bit, latency, and energy efficiency has slowed.
   Alternative memories have spent at least a decade being called
   “emerging,” and several are now good enough to substantially reduce how
   much DRAM a real system needs. I enjoy making that practical: redesigning
-  hardware on an FPGA, changing the kernel to make placement decisions cheap
-  and effective, and rethinking the interface between the two to minimize
+  hardware on an <strong>FPGA</strong>, changing the <strong>kernel</strong> to make placement decisions cheap
+  and effective, and rethinking the <strong>interface between the two</strong> to minimize
   overhead.
 </p>
 <p>
@@ -32,8 +32,8 @@ show_title: false
   read and write cost, limited endurance, and coarse write granularity.
   Commercial parts hid those behind a translation layer on the module, and the
   layer cost more than it saved. I work on the opposite arrangement, where the
-  system exposes the constraints and the kernel manages them. Such memory is
-  read-only to applications and written only by the kernel during migration,
+  system exposes the constraints and <strong>the kernel manages them</strong>. Such memory is
+  <strong>read-only to applications</strong> and written only by the kernel during migration,
   enforced with copy-on-write, which moves wear levelling off the device and
   lets the hardware get simpler rather than more complex.
 </p>
@@ -52,10 +52,10 @@ show_title: false
   and nowhere near enough memory bandwidth to feed it. Packets arrive variable
   sized and out of order while the memory they land in is a contiguous address
   space divided into fixed-size pages, and translating between the two layouts
-  costs copies that consume the bandwidth the analysis needed. With colleagues
+  costs <strong>copies</strong> that consume the bandwidth the analysis needed. With colleagues
   I work on addressing that lets software read a whole flow as one contiguous
-  region, built and measured on FPGAs. On an Alveo U250 prototype it cuts DRAM
-  traffic by 77 to 83 percent, lowers execution time by 25 to 62 percent, and
+  region, built and measured on FPGAs. On an Alveo U250 prototype it <strong>cuts DRAM
+  traffic by 77 to 83 percent</strong>, lowers execution time by 25 to 62 percent, and
   raises per-core throughput by 1.3 to 2.7 times.
 </p>
 {% include fig/packets.html %}
@@ -71,7 +71,7 @@ show_title: false
 <p>
   Once a server holds several kinds of memory, the operating system has to
   decide what belongs where, and how often a page is touched turns out to be
-  too coarse a signal. Two pages read equally often can perform very
+  <strong>too coarse a signal</strong>. Two pages read equally often can perform very
   differently in the same memory, because memory-level parallelism, compression
   and read and write asymmetry all cut across access frequency. I am interested
   in what the hardware should tell the operating system about how well a page
