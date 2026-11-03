@@ -9,7 +9,7 @@
   --rule: #e4e6e9; --rule-soft: #f0f1f3; --accent: #8c1515; --bg: #fff;
 
   --rail-bg: #8C1515; --rail-ink: #FFFFFF; --rail-quiet: #E8C9C9;
-  --rail-line: #A33A3A; --rail-w: 19.5rem;
+  --rail-line: #A33A3A; --rail-w: 20.5rem;
 
   --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
           "Helvetica Neue", Arial, sans-serif;
@@ -35,7 +35,7 @@ a:hover { text-decoration: underline; text-underline-offset: 2px; }
   display: flex; flex-direction: column; align-items: center; text-align: center;
 }
 .rail-photo {
-  width: 200px; height: 200px; border-radius: 10px; object-fit: cover;
+  width: 224px; height: 224px; border-radius: 50%; object-fit: cover;
   object-position: center top; display: block; margin-bottom: 1.5rem;
   background: var(--rail-line);
 }
@@ -113,23 +113,9 @@ p { margin: 0 0 1.1rem; color: var(--ink-soft); }
 @media (max-width: 56rem) {
   .shell { grid-template-columns: 1fr; }
   .rail-inner { position: static; padding: 2.25rem 1.5rem; }
-  .rail-photo { width: 128px; height: 128px; margin-bottom: 1rem; }
+  .rail-photo { width: 150px; height: 150px; margin-bottom: 1rem; }
   .rail-nav { flex-direction: row; flex-wrap: wrap; justify-content: center;
               gap: 1.1rem; margin-top: 1.1rem; }
   .social { margin-top: 1.1rem; }
   .main { padding: 2.25rem 1.5rem 3rem; }
 }
-
-/* ── Temporary rail-colour chooser. Delete with colors.html. ──────────── */
-.swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
-.swatch { margin: 0; }
-.swatch-rail {
-  background: var(--rb); color: var(--ri);
-  padding: 1.1rem 1rem 1.25rem; border-radius: 8px;
-}
-.swatch-rail img { width: 92px; height: 92px; border-radius: 6px; object-fit: cover; object-position: center top; display: block; }
-.sw-name { font-size: 0.86rem; font-weight: 650; margin-top: 0.75rem; line-height: 1.3; }
-.sw-role { color: var(--rq); font-size: 0.72rem; line-height: 1.45; margin-top: 0.3rem; }
-.sw-nav { display: flex; gap: 0.7rem; margin-top: 0.7rem; font-size: 0.76rem; color: var(--rq); }
-.swatch figcaption { font-size: 0.8rem; color: var(--ink-soft); margin-top: 0.55rem; line-height: 1.45; }
-.swatch code { font-size: 0.76rem; color: var(--ink-quiet); }
