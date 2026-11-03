@@ -35,6 +35,18 @@ show_title: false
 </p>
 {% include fig/arom.html %}
 
+<h2>Packet processing and memory bandwidth</h2>
+<p>
+  Network interfaces now have enough compute to inspect traffic at line rate
+  and nowhere near enough memory bandwidth to feed it. Packets arrive variable
+  sized and out of order while the memory they land in is a contiguous address
+  space divided into fixed-size pages, and translating between the two layouts
+  costs copies that consume the bandwidth the analysis needed. With colleagues
+  I work on addressing that lets software read a whole flow as one contiguous
+  region, built and measured on FPGAs.
+</p>
+{% include fig/packets.html %}
+
 <h2>Placing data across unlike memories</h2>
 <p>
   Once a server holds several kinds of memory, the operating system has to
@@ -47,18 +59,6 @@ show_title: false
   actually costs.
 </p>
 {% include fig/placement.html %}
-
-<h2>Packet processing and memory bandwidth</h2>
-<p>
-  Network interfaces now have enough compute to inspect traffic at line rate
-  and nowhere near enough memory bandwidth to feed it. Packets arrive variable
-  sized and out of order while the memory they land in is a contiguous address
-  space divided into fixed-size pages, and translating between the two layouts
-  costs copies that consume the bandwidth the analysis needed. With colleagues
-  I work on addressing that lets software read a whole flow as one contiguous
-  region, built and measured on FPGAs.
-</p>
-{% include fig/packets.html %}
 
 <div class="eyebrow">Publications</div>
 <ul class="pubs">

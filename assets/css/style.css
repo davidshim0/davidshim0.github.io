@@ -84,7 +84,8 @@ p { margin: 0 0 1.1rem; color: var(--ink-soft); }
 .fig-box.is-accent rect { stroke: var(--accent); }
 .fig-box.is-muted rect { fill: var(--rule-soft); stroke: var(--rule); }
 .fig-label { font: 600 13px var(--sans); fill: var(--ink); text-anchor: middle; }
-.fig-sub   { font: 400 11.5px var(--sans); fill: var(--ink-quiet); text-anchor: middle; }
+/* no text-anchor here: CSS would override the per-element attribute */
+.fig-sub   { font: 400 11.5px var(--sans); fill: var(--ink-quiet); }
 .fig-tag   { font: 400 11.5px var(--sans); fill: var(--ink-quiet); }
 .fig-line path { stroke: var(--ink-quiet); stroke-width: 1.4; fill: none; }
 .fig-line.is-dashed path { stroke-dasharray: 3 3; }
