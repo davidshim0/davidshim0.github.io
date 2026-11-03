@@ -4,7 +4,7 @@ show_title: false
 ---
 
 <section class="intro">
-  <div class="intro-photo is-placeholder">photo<br>goes here</div>
+  <img class="intro-photo" src="{{ '/assets/img/david.jpg' | relative_url }}" alt="Hui Sub (David) Shim">
   <div>
     <h1>Hui Sub (David) Shim</h1>
     <p class="role">PhD student, Electrical Engineering, Stanford University</p>
@@ -22,24 +22,28 @@ show_title: false
       Networks Group</a>.
     </p>
     <div class="links">
-      <a href="{{ '/cv/' | relative_url }}">CV</a>
-      <a href="https://github.com/davidshim0">GitHub</a>
-      <a href="https://davidshim0.github.io/study-guides/">Paper notes</a>
-      <a href="mailto:hsshim@stanford.edu">hsshim@stanford.edu</a>
+      <a href="{{ '/bio/' | relative_url }}">Bio</a>
+      <a href="https://github.com/{{ site.author.github }}">GitHub</a>
+      <a href="{{ site.author.linkedin }}">LinkedIn</a>
+      <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
     </div>
   </div>
 </section>
 
-<div class="eyebrow">Selected papers</div>
+<div class="eyebrow">Recent papers</div>
 <ul class="pubs">
-  {% assign sel = site.data.publications | where: "selected", true | sort: "year" | reverse %}
-  {% for pub in sel %}{% include pub.html pub=pub %}{% endfor %}
+  {% assign recent = site.data.publications | sort: "year" | reverse %}
+  {% for pub in recent limit: 3 %}{% include pub.html pub=pub %}{% endfor %}
 </ul>
-<p style="font-size:0.92rem"><a href="{{ '/publications/' | relative_url }}">All publications</a></p>
+<p class="more"><a href="{{ '/publications/' | relative_url }}">All publications</a></p>
 
-<div class="eyebrow">News</div>
-<ul class="news">
-  <li><span class="when">Sep 2026</span><span class="what">"The Kernel's Write: Application Read-Only Memory" appeared at DIMES '26.</span></li>
-  <li><span class="when">Sep 2026</span><span class="what">"Packets are Not Pages" appeared at CoNEXT '26.</span></li>
-  <li><span class="when">Sep 2024</span><span class="what">Started the PhD at Stanford, after nine years at Samsung.</span></li>
-</ul>
+<div class="eyebrow">Research</div>
+<p>
+  Memory is now the largest share of what a server costs and DRAM has stopped
+  getting cheaper per bit, so my work is about what comes next and what the
+  system software around it has to do differently. I am interested in denser
+  memories whose constraints the kernel manages rather than the device hiding
+  them, in how an operating system should place data once its memories are no
+  longer alike, and in why packet processing at line rate spends so much of
+  its memory bandwidth on copies it should not need.
+</p>

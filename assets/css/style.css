@@ -114,3 +114,12 @@ p  { margin: 0 0 1.15rem; color: var(--ink-soft); }
   .news li { flex-direction: column; gap: 0.1rem; }
   .news .when { flex: none; }
 }
+
+/* ── Bio: compact paper list that points at the real one ──────────────── */
+.pub-brief { list-style: none; margin: 0; padding: 0; }
+.pub-brief li { padding: 0.5rem 0; border-bottom: 1px solid var(--rule-soft); }
+.pub-brief li:last-child { border-bottom: 0; }
+.pb-title { display: block; color: var(--ink); font-weight: 560; }
+.pb-venue { display: block; color: var(--ink-quiet); font-size: 0.88rem; }
+
+.more { font-size: 0.92rem; margin-top: 0.9rem; }

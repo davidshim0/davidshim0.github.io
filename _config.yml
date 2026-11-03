@@ -14,14 +14,11 @@ author:
   short_name: "David Shim"
   email: "hsshim@stanford.edu"
   github: "davidshim0"
-  scholar: ""
-  linkedin: ""
+  linkedin: "https://www.linkedin.com/in/huisub-david-shim/"
 
 nav:
-  - { title: "Research",     url: "/research/" }
+  - { title: "Bio",          url: "/bio/" }
   - { title: "Publications", url: "/publications/" }
-  - { title: "Notes",        url: "/notes/" }
-  - { title: "CV",           url: "/cv/" }
 
 exclude:
   - README.md
