@@ -1,5 +1,5 @@
 /* ──────────────────────────────────────────────────────────────────────────
-   Tokens. --rail-bg is the one to change if the sidebar colour is wrong.
+   Tokens. --rail-bg is the one to change if the sidebar color is wrong.
    Alternatives:  warm stone    #efece6 / ink #2a2724 / quiet #6f6a62
                   deep cardinal #6b1010 / ink #f3e9e9 / quiet #c9a9a9
                   deep slate    #2b3038 / ink #e9eaec / quiet #a3a9b2
@@ -138,3 +138,20 @@ p { margin: 0 0 1.1rem; color: var(--ink-soft); }
   text-transform: uppercase; color: var(--ink-quiet); margin-bottom: 0.3rem;
 }
 .thread-papers .pub { padding: 0.35rem 0; border-bottom: 0; }
+
+/* ── Bio entries, resume shaped ───────────────────────────────────────── */
+.entry { margin-bottom: 2rem; }
+.entry-head {
+  display: flex; align-items: baseline; justify-content: space-between;
+  gap: 1rem; flex-wrap: wrap;
+}
+.entry-title { font-size: 1.08rem; font-weight: 650; color: var(--ink); }
+.entry-when { font-size: 0.86rem; color: var(--ink-quiet); white-space: nowrap; }
+.entry-sub { font-size: 0.94rem; color: var(--ink-soft); margin-top: 0.1rem; }
+.entry-role {
+  font-size: 0.93rem; font-weight: 600; color: var(--ink);
+  margin-top: 1.05rem;
+}
+.entry ul { margin: 0.4rem 0 0; padding-left: 1.15rem; }
+.entry li { color: var(--ink-soft); margin-bottom: 0.28rem; }
+.entry li::marker { color: var(--ink-quiet); }
