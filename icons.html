@@ -1,0 +1,27 @@
+---
+layout: default
+title: Icon options
+permalink: /icon-options/
+wide: true
+description: "Temporary page for choosing the publication icon treatment."
+---
+
+<p class="lede">
+  The same two papers twice. Colored above, grayscale below. The icons are
+  PDF, publisher page and AI summary.
+</p>
+<p class="note">Temporary page. Tell me which and I will apply it and delete this.</p>
+
+{% assign all = site.data.publications | sort: "year" | reverse %}
+
+<h2 class="section-head">A. Colored</h2>
+<ul class="pubs">
+  {% for pub in all %}{% include pub.html pub=pub %}{% endfor %}
+</ul>
+
+<h2 class="section-head">B. Grayscale</h2>
+<div class="icons-mono">
+  <ul class="pubs">
+    {% for pub in all %}{% include pub.html pub=pub %}{% endfor %}
+  </ul>
+</div>

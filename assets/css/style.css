@@ -106,10 +106,21 @@ p { margin: 0 0 1.1rem; color: var(--ink-soft); }
 .pub-authors strong { color: var(--ink); font-weight: 650; }
 .pub-venue { color: var(--ink-quiet); font-size: 0.88rem; margin-top: 0.1rem; }
 .pub-links { margin-top: 0.5rem; display: flex; align-items: center; gap: 0.7rem; }
-.pub-icon { display: inline-flex; color: var(--ink-quiet); opacity: 0.55; transition: opacity .12s ease; }
+/* Colored set. Each icon carries its own hue, so none of them reads as the
+   disabled sibling of the PDF. The reds and ambers match the summary pages. */
+.pub-icon { display: inline-flex; opacity: 0.9; transition: opacity .12s ease; }
 .pub-icon:hover { opacity: 1; text-decoration: none; }
-.pub-icon.is-pdf { opacity: 0.88; }
 .pub-icon svg { display: block; }
+.pub-icon.is-pdf  { color: #8C1515; }
+.pub-icon.is-site { color: #1F6F8B; }
+.pub-icon.is-sum  { color: #B5720F; }
+
+/* Monochrome set: one class on an ancestor switches all three. */
+.icons-mono .pub-icon,
+.icons-mono .pub-icon.is-pdf,
+.icons-mono .pub-icon.is-site,
+.icons-mono .pub-icon.is-sum { color: var(--ink-quiet); opacity: 0.6; }
+.icons-mono .pub-icon:hover { opacity: 1; }
 
 .foot {
   margin-top: 3.5rem; padding-top: 1.4rem; border-top: 1px solid var(--rule);

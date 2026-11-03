@@ -12,14 +12,14 @@
     {% if include.pub.pdf %}
     <a class="pub-icon is-pdf" href="{{ include.pub.pdf | relative_url }}" title="PDF" aria-label="PDF">
       <svg viewBox="0 0 24 24" fill="none" width="20" height="20">
-        <path fill="#8c1515" d="M5.9 1.5h8.4l5.8 5.8v14a2.2 2.2 0 0 1-2.2 2.2H5.9a2.2 2.2 0 0 1-2.2-2.2V3.7a2.2 2.2 0 0 1 2.2-2.2z"/>
+        <path fill="currentColor" d="M5.9 1.5h8.4l5.8 5.8v14a2.2 2.2 0 0 1-2.2 2.2H5.9a2.2 2.2 0 0 1-2.2-2.2V3.7a2.2 2.2 0 0 1 2.2-2.2z"/>
         <path fill="#ffffff" fill-opacity="0.45" d="M14.3 1.5l5.8 5.8h-5.8z"/>
         <text x="11.8" y="17.6" text-anchor="middle" fill="#ffffff" font-family="Helvetica,Arial,sans-serif" font-weight="700" font-size="7.3">PDF</text>
       </svg>
     </a>
     {% endif %}
     {% if include.pub.doi %}
-    <a class="pub-icon" href="{{ include.pub.doi }}" title="Publisher page" aria-label="Publisher page">
+    <a class="pub-icon is-site" href="{{ include.pub.doi }}" title="Publisher page" aria-label="Publisher page">
       <svg viewBox="0 0 19 19" width="20" height="20" stroke="currentColor" fill="none">
         <path stroke-width="1.17359" d="m 9.4490241,0.58679495 a 8.9081759,8.6969871 0 1 0 0.09136,0 z"/>
         <path stroke-width="0.812487" d="M 9.4947041,0.53622655 V 17.9302 M 18.40288,9.2332135 H 0.58652827 M 2.5965782,3.8812216 a 11.877568,11.595983 0 0 0 13.7962528,0 m 0,10.7039834 a 11.877568,11.595983 0 0 0 -13.7962528,0 M 8.8094604,0.75922615 a 11.420738,11.149983 0 0 0 0,17.03717485 m 1.3704896,0 a 11.420738,11.149983 0 0 0 0,-17.03717485"/>
@@ -27,7 +27,7 @@
     </a>
     {% endif %}
     {% if include.pub.summary %}
-    <a class="pub-icon" href="{{ include.pub.summary }}" title="AI summary" aria-label="AI summary">
+    <a class="pub-icon is-sum" href="{{ include.pub.summary }}" title="AI summary" aria-label="AI summary">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
         <path d="M13.2 2.6l1.9 5.1 5.1 1.9-5.1 1.9-1.9 5.1-1.9-5.1-5.1-1.9 5.1-1.9z"/>
         <path d="M6.1 15.4l.9 2.4 2.4.9-2.4.9-.9 2.4-.9-2.4-2.4-.9 2.4-.9z"/>
