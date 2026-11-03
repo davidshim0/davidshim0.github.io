@@ -147,7 +147,12 @@ p { margin: 0 0 1.1rem; color: var(--ink-soft); }
 }
 .entry-title { font-size: 1.08rem; font-weight: 650; color: var(--ink); }
 .entry-when { font-size: 0.86rem; color: var(--ink-quiet); white-space: nowrap; }
-.entry-sub { font-size: 0.94rem; color: var(--ink-soft); margin-top: 0.1rem; }
+/* The line under an entry title reads the same as a role line: same size,
+   same weight, same color token. Only the spacing differs, because one sits
+   directly under a title and the other follows a list. */
+.entry-sub {
+  font-size: 0.93rem; font-weight: 600; color: var(--ink); margin-top: 0.15rem;
+}
 .entry-role {
   font-size: 0.93rem; font-weight: 600; color: var(--ink);
   margin-top: 1.05rem;
